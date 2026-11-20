@@ -13,10 +13,12 @@ O fy mode nasceu de uma rotina de sete passos. Os quatro primeiros são conversa
 | 3. Consolidar a spec | A pessoa lê, discute e a spec fecha. O que for decidido entra na spec. A IA sugere os testes manuais e a pessoa corta o que não for necessário | A pessoa |
 | 4. Criar o plano | A IA quebra a spec consolidada em tarefas pequenas | A IA propõe, a pessoa aprova |
 | 5. Desenvolver | **fy mode:** um agente escreve o código guiado pelos testes | Agentes |
-| 6. Testar | **fy mode:** o que testar já está decidido antes de começar (os testes manuais, na consolidação da spec; a lista de testes automáticos, aprovada pela pessoa no início da fase). Neste passo, agentes sem contexto escrevem o código desses testes | A pessoa já aprovou a lista; os agentes escrevem |
+| 6. Testar | **fy mode:** a IA escolhe sozinha os testes essenciais e roda as verificações automáticas (lint). A pessoa só vê o que a IA tem dúvida, o que é exibido para o usuário e os testes manuais. Depois, agentes sem contexto escrevem o código dos testes | A IA escolhe; a pessoa decide dúvidas e o que o usuário vê |
 | 7. Revisar | **fy mode:** um agente novo revisa cada tarefa e pode sugerir alterações. No fim da fase rodam os testes manuais, e outro agente audita a fase. A pessoa lê o que a revisão apontou e decide se aquilo é mesmo um erro | Agentes sugerem; a pessoa decide |
 
 A revisão não tem a palavra final. O revisor é uma IA e pode falhar: ele pode apontar como erro um comportamento que era exatamente o que você queria. Leia as sugestões e os erros que ele diz ter encontrado e confira, um por um, se aquele comportamento é esperado ou não.
+
+A pessoa não aprova lista técnica de testes, porque não tem como julgá-la. A IA decide os testes essenciais e leva à pessoa só o que depende dela: os casos em que há dúvida sobre o comportamento esperado e os que tratam do que o usuário vê. A pessoa responde quais acha bons e pode sugerir outros, e a IA confere se cada sugestão faz sentido antes de incluir.
 
 Dentro do fy mode a ordem dos passos 5 e 6 se inverte: **o teste é escrito antes do código**. Na rotina eles aparecem como "desenvolver" e "testar" porque é assim que a pessoa pede; quem garante a ordem certa é o método.
 
@@ -154,7 +156,8 @@ Nenhum achado é passado como recado de um agente para outro: ele entra num arqu
 ```
 spec + plano
     │
-    ├─ painel de testes ──► lista de testes + testes manuais ──► a pessoa aprova (uma vez por fase)
+    ├─ painel de testes ──► a IA escolhe os testes essenciais
+    │                        └─► a pessoa vê só: dúvidas, o que o usuário vê, testes manuais
     │
     └─ por tarefa:
          mapeador ──► autor de testes ──► implementador ──► revisor ──► commit

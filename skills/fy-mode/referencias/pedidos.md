@@ -35,7 +35,7 @@ Tudo o que um agente precisa ler está em arquivo. Em funcionalidade, na pasta d
 
 | Arquivo | Conteúdo |
 |---|---|
-| `catalogo-testes.md` | Casos de teste por tarefa, aprovados pela pessoa. Achado de comportamento entra aqui |
+| `catalogo-testes.md` | Casos de teste essenciais por tarefa, escolhidos pelo coordenador. Os de dúvida e os que tratam do que o usuário vê passaram pela pessoa. Achado de comportamento entra aqui |
 | `mapas/<id-da-tarefa>.md` | O mapa da tarefa |
 | `opinioes.md` | Achados de classe "opinião", para o auditor da fase |
 | `saidas/<id-da-tarefa>-<n>.txt` | Saída de testes que outro agente precisa ler |
@@ -81,6 +81,7 @@ Formatos de dados envolvidos, com campos e tipos.
 - Fábricas e dados de apoio disponíveis: `caminho/arquivo`
 - Comando para rodar só os testes desta tarefa: `...`
 - Comando para rodar os contratos vizinhos: `...`
+- Comando das verificações automáticas (lint, tipos), se o projeto tiver: `...`
 
 ## Onde mexer
 - Arquivos do escopo: `caminho/arquivo`

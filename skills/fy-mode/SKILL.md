@@ -91,7 +91,7 @@ Se confirmar um achado depende de saber se o comportamento é o esperado e a spe
 
 Os achados de um mesmo revisor são resolvidos numa rodada só: um autor de testes novo para os casos de comportamento e um implementador novo para tudo. A versão final passa por um revisor novo antes do commit.
 
-Caso novo no catálogo que sai da spec ao pé da letra não precisa de nova aprovação. Se exigir interpretação da spec, a pessoa decide.
+Caso novo no catálogo que sai da spec ao pé da letra não vai para a pessoa. Se exigir interpretação da spec, a pessoa decide.
 
 No máximo duas rodadas de revisão por tarefa. Na segunda, só achado de comportamento abre correção; os outros vão para o arquivo de opiniões.
 
@@ -101,7 +101,13 @@ Os caminhos desses arquivos estão em `referencias/pedidos.md`.
 
 Pare e pergunte só nestes casos: dúvida de regra de negócio, texto que o usuário vê, mudança em fluxo que já existe, mockup e push. Respondido, siga sem pedir confirmação de novo.
 
-A lista de testes de cada fase é aprovada pela pessoa de uma vez, numa página, em linguagem clara e com um exemplo concreto por grupo de testes. Os testes manuais da fase vão na mesma página.
+**Testes: o que você decide e o que a pessoa aprova.** Você escolhe sozinho os testes essenciais de cada tarefa e roda as verificações automáticas do projeto (lint, tipos). A pessoa não aprova essa lista: ela não tem como julgar uma lista técnica. Leve à pessoa, uma vez por fase, numa página em linguagem clara e com um exemplo concreto por item, só três coisas:
+
+- os casos em que você tem dúvida sobre o comportamento esperado;
+- os casos sobre o que o usuário vê: tela, texto, mensagem;
+- os testes manuais da fase.
+
+A pessoa responde quais acha bons e pode sugerir outros. Avalie cada sugestão dela: inclua a que faz sentido e, se alguma não fizer, diga por quê. Não inclua calado nem descarte calado.
 
 ## Testes manuais
 

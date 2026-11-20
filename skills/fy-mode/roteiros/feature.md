@@ -13,7 +13,7 @@ Copie os passos para a lista de tarefas. Os passos 1 a 4 acontecem uma vez por f
    - advogado do diabo (casos de borda, e como um teste fraco deixaria o erro passar).
 
    Una os catálogos num só, por tarefa. As dúvidas de spec vão para a pessoa.
-2. **Aprovação.** Mostre a lista de testes da fase à pessoa: uma página, linguagem clara, um exemplo concreto por grupo. Na mesma página vão os testes manuais da fase: os que a spec já traz ou, se ela não traz, até cinco sugestões suas, cada uma dizendo por que um teste automático não prova aquilo. A pessoa corta o que não for necessário. Espere a aprovação e grave a lista em `testes-manuais.md`.
+2. **Escolha dos testes e o que vai para a pessoa.** Corte o catálogo para o essencial de cada tarefa: um caso por regra da spec, mais os casos de borda que mudam o resultado. Essa lista você decide sozinho. Separe para a pessoa, numa página só, em linguagem clara e com um exemplo concreto por item: os casos em que você tem dúvida sobre o comportamento esperado, os casos sobre o que o usuário vê, e os testes manuais da fase (os que a spec já traz ou, se ela não traz, até cinco sugestões suas, cada uma dizendo por que um teste automático não prova aquilo). A pessoa responde quais acha bons e pode sugerir outros; avalie cada sugestão e diga por quê quando alguma não fizer sentido. Grave o resultado em `catalogo-testes.md` e `testes-manuais.md`.
 3. **Tamanho das tarefas.** Uma tarefa é um comportamento verificável. Tarefa com mais de um ponto de entrada novo, ou que o plano prevê mexer em mais de cinco arquivos, é dividida no plano antes de começar.
 4. **Mapas.** Lance um `mapeador` por tarefa, em paralelo. Leia o "Não encontrado" de cada mapa: ponto de entrada novo sem assinatura no plano é corrigido no plano agora.
 
@@ -21,7 +21,7 @@ Copie os passos para a lista de tarefas. Os passos 1 a 4 acontecem uma vez por f
 
 5. **Autor de testes novo.** Escreve os testes da tarefa. Rode os testes: eles precisam falhar numa verificação do comportamento da tarefa, não por erro de import, de dados de apoio ou de ambiente.
 6. **Implementador novo.** Recebe os testes prontos e não os altera.
-7. **Testes.** Rode os testes da tarefa e os contratos vizinhos, com os comandos do mapa. Vermelho: correção com um implementador novo, um nível de esforço acima. O mesmo teste vermelho depois de duas correções: aplique o freio de rodadas.
+7. **Testes.** Rode os testes da tarefa, os contratos vizinhos e as verificações automáticas do projeto (lint, tipos), com os comandos do mapa. Vermelho: correção com um implementador novo, um nível de esforço acima. O mesmo teste vermelho depois de duas correções: aplique o freio de rodadas.
 8. **Revisor novo.**
 9. **Achados.** Todo achado é suspeita até ser confirmado. Confirme e trate cada um pela classe (comportamento, regra escrita, opinião), conforme a tabela do `SKILL.md`. Houve correção: revisor novo na versão final.
 10. **Commit.** Um commit com o código e os testes da tarefa.
