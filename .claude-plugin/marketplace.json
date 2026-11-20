@@ -1,0 +1,14 @@
+{
+  "name": "fy-mode",
+  "description": "Marketplace do fy mode: desenvolvimento com agentes em papéis separados.",
+  "owner": {
+    "name": "fyalmeida"
+  },
+  "plugins": [
+    {
+      "name": "fy-mode",
+      "source": "./",
+      "description": "Desenvolvimento com agentes em papéis separados: quem escreve o teste não vê o código, quem implementa não muda o teste, um terceiro revisa."
+    }
+  ]
+}

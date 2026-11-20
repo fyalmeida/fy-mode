@@ -1,0 +1,18 @@
+{
+  "name": "fy-mode",
+  "description": "Desenvolvimento com agentes em papéis separados: quem escreve o teste não vê o código, quem implementa não muda o teste, um terceiro revisa.",
+  "version": "0.1.0",
+  "keywords": [
+    "skills",
+    "subagentes",
+    "tdd",
+    "revisao",
+    "fluxo-de-trabalho"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "fyalmeida"
+  },
+  "homepage": "https://github.com/fyalmeida/fy-mode",
+  "repository": "https://github.com/fyalmeida/fy-mode"
+}
